@@ -1,8 +1,8 @@
-# 😵‍💫:tumbler_glass: Lil Scotch
+# 😵‍💫:tumbler_glass: Lil Scotch :ice_cube::city_sunrise:
 
 A Discord.js bot that can make requests to your Stable Diffusion WebUI server and (optionally) OpenAI's DALL-E and return results. Currently supports Text to Image and Image to Image, as well as use of multiple models and parameters for model generation.
 
-- Image of output will be here.
+![Image of output](https://github.com/zer0ney/LilScotch/blob/c9aa8423c78cafe393d4fbe48e0e21ee18cf0daa/screenshots/bot-output.png)
 
 ## Requirements
 
@@ -20,9 +20,9 @@ You'll also need to [create a Discord bot](https://discord.com/developers/applic
 - Run `npm install` and wait for the dependencies to install.
 - Run `node /utilities/refreshCommands.js`. You should see output stating `Successfully reloaded x application (/) commands.` (this may change depending on if you choose to include `/dalle`.)
 
-Set up for the bot is done! Now for the Stable Diffusion Webui:
-- Navigate to the folder where you installed the Webui.
-Depending on whether you're running on Windows or Linux:
+Set up for the bot is done! Now for the Stable Diffusion Webui.
+
+Navigate to the folder where you installed the Webui. Depending on whether you're running on Windows or Linux:
 - Windows: Open `webui-user.bat` and after the line that says `set COMMANDLINE_ARGS=` add this: `--api --nowebui --listen`. It should look like `set COMMANDLINE_ARGS=--api --nowebui --listen`.
 - Linux: Open `webui-user.sh` and after the line that says `export COMMANDLINE_ARGS=` add this: `--api --nowebui --listen`. It should look like `export COMMANDLINE_ARGS=--api --nowebui --listen`.
 
@@ -32,7 +32,7 @@ Now we'll be downloading the models you can use. I've set up three to use as def
 - Now run the webui - using either `webui.sh` or `webui.bat` depending on if you're on Linux or Windows respectively.
 You should see output similar to the following:
 
-- image of webui output will be here
+![image of webui output](https://github.com/zer0ney/LilScotch/blob/c9aa8423c78cafe393d4fbe48e0e21ee18cf0daa/screenshots/stablediff-webui-output.png)
 
 Now open up another terminal window and navigate to where your Discord bot is, and then run `node index.js` - your bot should come online in your server!
 
@@ -48,7 +48,7 @@ Now open up another terminal window and navigate to where your Discord bot is, a
 
 ### What options does the pop up have for `/img2img` and `/text2img?`
 
-- image here
+![image of pop up prompt](https://github.com/zer0ney/LilScotch/blob/c9aa8423c78cafe393d4fbe48e0e21ee18cf0daa/screenshots/popup-prompt.png)
 
 ### How do I join my bot to a server?
 

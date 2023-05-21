@@ -18,7 +18,7 @@ You'll also need to [create a Discord bot](https://discord.com/developers/applic
 - Open `example.env` and change all of the fields as required, then rename the file to `.env`.
 - Open up a terminal and navigate to the folder where the bot is.
 - Run `npm install` and wait for the dependencies to install.
-- Run `node /utilities/refreshCommands.js`. You should see output stating `Successfully reloaded x application (/) commands.` (this may change depending on if you choose to include `/dalle`.)
+- Run `node utilities/refreshCommands.js`. You should see output stating `Successfully reloaded x application (/) commands.` (this may change depending on if you choose to include `/dalle`.)
 
 Set up for the bot is done! Now for the Stable Diffusion Webui.
 

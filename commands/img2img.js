@@ -120,7 +120,7 @@ module.exports = {
 			if (modalInteraction.fields.getTextInputValue('cfgScaleInput') == '') {
 				cfgScale = 8;
 			} else {
-				steps = parseInt(modalInteraction.fields.getTextInputValue('cfgScaleInput'));
+				cfgScale = parseInt(modalInteraction.fields.getTextInputValue('cfgScaleInput'));
 			}
 
 			if (modalInteraction.fields.getTextInputValue('samplerInput') == '') {
@@ -170,8 +170,8 @@ module.exports = {
 			const imageResponse = await getImage(prompt, negPrompt, model, cfgScale, sampler, steps, inputImgBase64);
 
 			const images = [];
-			images.push(new Buffer.from(await imageResponse.parameters.init_images[0], 'base64'));
 			images.push(new Buffer.from(await imageResponse.images[0], 'base64'));
+			images.push(new Buffer.from(await imageResponse.parameters.init_images[0], 'base64'));
 
 			// building a details object for the final message
 			const details = new Object();
@@ -179,6 +179,7 @@ module.exports = {
 			details.cfgScale = cfgScale;
 			details.sampler = sampler;
 			details.steps = steps;
+			details.originalImage = inputImage.url;
 
 			// now we go and send our image. this definitely doesnt need to be in a function but it looks a lot nicer.
 			return await sendImages(images, prompt, negPrompt, modalInteraction.user.tag, modalInteraction, details);
@@ -264,7 +265,7 @@ async function sendImages(images, prompt, negPrompt, user, interaction, details)
 
 		const embed = new EmbedBuilder()
 			// url is set to funny gif. feel free to change it if you'd like
-			.setURL('https://cdn.discordapp.com/attachments/990567237071015946/990567769537937428/ezgif.com-gif-maker.gif')
+			.setURL(details.originalImage)
 			.setImage(`attachment://${imagename}`)
 			.setTitle(`${details.model}`)
 			.addFields(

@@ -19,7 +19,7 @@ module.exports = {
 		),
 	async execute(interaction) {
 		if (interaction.channelId != process.env.DISCORD_CHANNEL_ID) {
-			return await interaction.reply({ content: `Wrong channel! Head to ${process.env.DISCORD_CHANNEL_ID} and try again there.`, ephemeral: true });
+			return await interaction.reply({ content: `Wrong channel! Head to <#${process.env.DISCORD_CHANNEL_ID}> and try again there.`, ephemeral: true });
 		}
 
 		// modals cap out at 5 entries so we can't enter any more options here sadly.
@@ -106,7 +106,7 @@ module.exports = {
 			if (modalInteraction.fields.getTextInputValue('cfgScaleInput') == '') {
 				cfgScale = 8;
 			} else {
-				steps = parseInt(modalInteraction.fields.getTextInputValue('cfgScaleInput'));
+				cfgScale = parseInt(modalInteraction.fields.getTextInputValue('cfgScaleInput'));
 			}
 
 			if (modalInteraction.fields.getTextInputValue('samplerInput') == '') {

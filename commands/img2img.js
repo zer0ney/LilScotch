@@ -25,7 +25,7 @@ module.exports = {
 		),
 	async execute(interaction) {
 		if (interaction.channelId != process.env.DISCORD_CHANNEL_ID) {
-			return await interaction.reply({ content: `Wrong channel! Head to ${process.env.DISCORD_CHANNEL_ID} and try again there.`, ephemeral: true });
+			return await interaction.reply({ content: `Wrong channel! Head to <#${process.env.DISCORD_CHANNEL_ID}> and try again there.`, ephemeral: true });
 		}
 
 		// we need to define image and model here, since the modal interaction is a completely different interaction and wont have any image data

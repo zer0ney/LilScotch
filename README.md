@@ -29,7 +29,8 @@ Navigate to the folder where you installed the Webui. Depending on whether you'r
 Now we'll be downloading the models you can use. I've set up three to use as defaults: Stable Diffusion 2.1, Realism, and DreamShaper. These models are good starting points, but if you want to use your own models you'll need to modify `img2img.js` and `text2img.js` to suit your needs.
 - Download [Stable Diffusion 2.1](https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.safetensors), [Realism](https://civitai.com/api/download/models/20414?type=Model&format=SafeTensor&size=full&fp=fp16), and [DreamShaper](https://civitai.com/api/download/models/43888?type=Model&format=SafeTensor&size=full&fp=fp16). These files will download as `.safetensor` files.
 - In your Stable Diffusion Webui folder, place the files you just downloaded in `/models/Stable-diffusion/`.
-- Now run the webui - using either `webui.sh` or `webui.bat` depending on if you're on Linux or Windows respectively.
+- Rename the files to `dreamshaper.safetensors`, `realism-engine.safetensors` and `stable-diffusion-v2.1.safetensors` respectively. (In a future version the bot will pick up on the loaded models, but for now renaming will do.)
+- Now run the webui - using either `webui.sh` or `webui.bat` depending on if you're on Linux or Windows.
 You should see output similar to the following:
 
 ![image of webui output](https://github.com/zer0ney/LilScotch/blob/c9aa8423c78cafe393d4fbe48e0e21ee18cf0daa/screenshots/stablediff-webui-output.png)

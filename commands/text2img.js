@@ -161,9 +161,6 @@ module.exports = {
 			details.sampler = sampler;
 			details.steps = steps;
 
-			// by now the new model has loaded - set the status of the bot.
-			// interaction.client.user.setActivity(`big boob`, { type: ActivityType.Watching });
-
 			return await sendImage(image, prompt, negPrompt, modalInteraction.user.tag, modalInteraction, details);
 		}
 	},

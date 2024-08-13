@@ -1,4 +1,4 @@
-# 😵‍💫:tumbler_glass: Lil Scotch :ice_cube::city_sunrise:
+# 😵‍💫🥃 Lil Scotch 🧊🌇
 
 A Discord.js bot that can make requests to your Stable Diffusion WebUI server and (optionally) OpenAI's DALL-E and return results. Currently supports Text to Image and Image to Image, as well as use of multiple models and parameters for model generation.
 
